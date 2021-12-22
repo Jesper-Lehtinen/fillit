@@ -6,7 +6,7 @@
 #    By: jlehtine <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/27 18:32:41 by jlehtine          #+#    #+#              #
-#    Updated: 2021/12/21 23:43:58 by jlehtine         ###   ########.fr        #
+#    Updated: 2021/12/22 15:43:44 by jlehtine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,7 +82,10 @@ SRCS = 	ft_sqrt.c\
 	ft_abs.c\
 	get_next_line.c\
 	ft_memrealloc.c\
-	ft_bitrev.c
+	ft_bitrev.c\
+	ft_bitmod.c\
+	ft_bitprint.c\
+	ft_bitswap.c
 
 OBJS = $(patsubst %.c, %.o, $(SRCS))
 CC = gcc

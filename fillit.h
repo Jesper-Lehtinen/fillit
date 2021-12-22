@@ -6,7 +6,7 @@
 /*   By: jlehtine <jlehtine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:56:15 by jlehtine          #+#    #+#             */
-/*   Updated: 2021/12/22 01:33:22 by jlehtine         ###   ########.fr       */
+/*   Updated: 2021/12/22 14:30:47 by jlehtine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ typedef struct s_tetrimino_info
 
 void	solve(t_uint16 *tetriminos, t_uint8 len);
 void	fill_tetriminos(t_shape *tetriminos);
-int		read_tetriminos(const int fd, t_uint16 *tetriminos, t_shape *all_shapes);
+int		read_tetriminos(const int fd, t_uint16 *tetriminos,
+			t_shape *all_shapes);
 int		add_tetrimino(const char *tetri, t_uint16 *tetriminos,
 			t_shape *all_shapes, t_uint8 i);
 void	remove_shape(t_uint8 *lines, int *map, t_coords coords,

@@ -6,7 +6,7 @@
 /*   By: jlehtine <jlehtine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:56:33 by jlehtine          #+#    #+#             */
-/*   Updated: 2021/12/22 02:32:32 by jlehtine         ###   ########.fr       */
+/*   Updated: 2021/12/22 14:33:07 by jlehtine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,8 @@ void	solve(t_uint16 *tetriminos, t_uint8 len)
 	{
 		minfo.map_size++;
 		minfo.map = (int *)ft_memrealloc(minfo.map,
-			(minfo.map_size - 1) * sizeof(int), minfo.map_size * sizeof(int));
+				(minfo.map_size - 1) * sizeof(int),
+				minfo.map_size * sizeof(int));
 		if (!minfo.map)
 			break ;
 	}

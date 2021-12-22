@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bitrev.c                                        :+:      :+:    :+:   */
+/*   ft_bitmod.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlehtine <jlehtine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/21 18:45:40 by jlehtine          #+#    #+#             */
-/*   Updated: 2021/12/22 15:46:30 by jlehtine         ###   ########.fr       */
+/*   Created: 2021/12/22 15:07:58 by jlehtine          #+#    #+#             */
+/*   Updated: 2021/12/22 15:38:23 by jlehtine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned char	ft_bitrev(unsigned char octet)
+unsigned char	ft_bitmod(unsigned char octet, unsigned char place,
+		unsigned char bin)
 {
-	size_t			count;
 	unsigned char	temp;
 
-	count = 8;
-	temp = 0;
-	while (count--)
-	{
-		temp <<= 1;
-		temp |= octet & 1;
-		octet >>= 1;
-	}
-	return (temp);
+	temp = 1 << place;
+	octet &= ~temp;
+	octet |= bin << place;
+	return (octet);
 }

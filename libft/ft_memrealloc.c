@@ -6,7 +6,7 @@
 /*   By: jlehtine <jlehtine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 23:44:18 by jlehtine          #+#    #+#             */
-/*   Updated: 2021/12/21 23:44:22 by jlehtine         ###   ########.fr       */
+/*   Updated: 2021/12/22 14:33:32 by jlehtine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memrealloc(void *ptr, size_t old_size, size_t new_size)
 {
 	void	*new;
-	
+
 	new = ft_memalloc(new_size);
 	if (!new)
 	{
