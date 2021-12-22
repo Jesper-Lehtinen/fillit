@@ -6,7 +6,7 @@
 /*   By: jlehtine <jlehtine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 17:36:58 by jlehtine          #+#    #+#             */
-/*   Updated: 2021/12/22 02:33:12 by jlehtine         ###   ########.fr       */
+/*   Updated: 2021/12/22 14:30:13 by jlehtine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ static t_uint16	get_shape(t_uint16 num, t_shape *all_shapes)
 static t_uint16	check_binary(const char *tetrimino, const char *stop)
 {
 	t_uint16	bin;
+
 	if (!tetrimino)
 		return (0);
 	bin = 0;

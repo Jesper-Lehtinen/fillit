@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tetrimino.c                                        :+:      :+:    :+:   */
+/*   tetriminos.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlehtine <jlehtine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 17:13:18 by jlehtine          #+#    #+#             */
-/*   Updated: 2021/12/21 19:56:59 by ashatalo         ###   ########.fr       */
+/*   Updated: 2021/12/23 00:16:06 by jlehtine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	fill_tetriminos_map(t_shape *tetriminos)
 	tetriminos[0].shape_map = 0b1111;
 	tetriminos[18].shape_map = 0b1000100010001;
 	tetriminos[2].shape_map = 0b1100011;
-	tetriminos[16].shape_map = 0b10011001000;
+	tetriminos[16].shape_map = 0b100110010;
 	tetriminos[8].shape_map = 0b110110;
 	tetriminos[10].shape_map = 0b1000110001;
 	tetriminos[6].shape_map = 0b100111;

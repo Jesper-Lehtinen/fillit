@@ -6,11 +6,33 @@
 /*   By: jlehtine <jlehtine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:56:33 by jlehtine          #+#    #+#             */
-/*   Updated: 2021/12/22 02:32:32 by jlehtine         ###   ########.fr       */
+/*   Updated: 2021/12/23 00:37:27 by jlehtine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
+
+void	print_map(int map_size, int *map)
+{
+	int		i;
+	size_t	len;
+	char	*str;
+
+	i = 0;
+	while (i < map_size)
+	{
+		str = ft_itoa_base(map[i], 2);
+		len = ft_strlen(str);
+		while (len < (size_t)map_size)
+		{
+			write(1, "0", 1);
+			len++;
+		}
+		ft_putendl(str);
+		ft_strdel(&str);
+		i++;
+	}
+}
 static int	update_best(t_tetrimino_info *info, t_uint8 *i, t_coords coords)
 {
 	info[*i - 1].coords = coords;
@@ -85,7 +107,8 @@ void	solve(t_uint16 *tetriminos, t_uint8 len)
 	{
 		minfo.map_size++;
 		minfo.map = (int *)ft_memrealloc(minfo.map,
-			(minfo.map_size - 1) * sizeof(int), minfo.map_size * sizeof(int));
+				(minfo.map_size - 1) * sizeof(int),
+				minfo.map_size * sizeof(int));
 		if (!minfo.map)
 			break ;
 	}
